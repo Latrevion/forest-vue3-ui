@@ -1,5 +1,5 @@
 <template>
-        <div>
+    <div>
        <div class="topnav">
         <div class="logo">LOGO</div>
       <ul class="menu">
@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
     export default{
-        
+
     }
 </script>
 
