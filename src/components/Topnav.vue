@@ -7,6 +7,7 @@
         <li>菜单2</li>
       </ul>
        </div>
+       <span class="toggleAside"></span>
     </div>
 </template>
 <script lang="ts">
@@ -14,7 +15,7 @@
 
     export default{
         setup(){
-           const menuVisible = inject<Ref<boolean>>('menuVisible')
+          const menuVisible = inject<Ref<boolean>>('menuVisible')
           const toggleMenu=()=>{
             menuVisible!.value = !menuVisible!.value
             
@@ -31,6 +32,8 @@
   padding: 16px;
   position: relative;
   z-index: 10;
+  justify-content: center;
+  align-items: center;
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -43,5 +46,11 @@
       margin: 0 1em;
     }
   }
+  > .toggleMenu {}
+  @media (max-width:500px) {
+    > .menu{display: none;} 
+    > .logo{margin: 0 auto;}
+  }
+
 }
 </style>
