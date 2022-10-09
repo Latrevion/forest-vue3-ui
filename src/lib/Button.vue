@@ -1,7 +1,7 @@
 <template>
-        <button class="forest-button" :class="`theme-${theme}`">
+    <button class="forest-button" :class="{[`forest-theme-${theme}`]:theme}">
             <slot />
-        </button>
+    </button>
 </template>
 <script lang="ts">
 export default {
@@ -11,7 +11,7 @@ props:{
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
