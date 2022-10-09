@@ -1,5 +1,5 @@
 <template>
-    <button class="forest-button" :class="classes">
+    <button class="forest-button" :class="classes" :disabled="disabled">
         <slot />
     </button>
 </template>
@@ -18,6 +18,10 @@ export default {
         level: {
             type: String,
             default: 'normal'
+        },
+        disabled:{
+            type:Boolean,
+            default:false
         }
     },
     setup(props) {
@@ -42,7 +46,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
-
+$grey: grey;
 .forest-button {
     box-sizing: border-box;
     height: $h;
@@ -168,7 +172,20 @@ $red: red;
             }
         }
     }
-
-
+    &.forest-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.forest-theme-link, &.forest-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
 }
 </style>
