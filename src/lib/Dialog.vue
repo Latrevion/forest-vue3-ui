@@ -1,21 +1,23 @@
 <template>
     <template v-if="visible">
-        <div class="forest-dialog-overlay" @click="onclickOverlay"></div>
-        <div class="forest-dialog-wrapper">
-            <div class="forest-dialog">
-                <header>
-                    <slot name="title"></slot>
-                    <span @click="close" class="forest-dialog-close"></span>
-                </header>
-                <main>
-                    <slot name="main"></slot>
-                </main>
-                <footer>
-                    <Button level="main" @click="ok">OK</Button>
-                    <Button @click="cancel">Cancel</Button>
-                </footer>
+        <Teleport to="body">
+            <div class="forest-dialog-overlay" @click="onclickOverlay"></div>
+            <div class="forest-dialog-wrapper">
+                <div class="forest-dialog">
+                    <header>
+                        <slot name="title"></slot>
+                        <span @click="close" class="forest-dialog-close"></span>
+                    </header>
+                    <main>
+                        <slot name="main"></slot>
+                    </main>
+                    <footer>
+                        <Button level="main" @click="ok">OK</Button>
+                        <Button @click="cancel">Cancel</Button>
+                    </footer>
+                </div>
             </div>
-        </div>
+        </Teleport>
     </template>
 </template>
 
