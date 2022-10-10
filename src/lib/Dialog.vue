@@ -3,10 +3,12 @@
         <div class="forest-dialog-overlay" @click="onclickOverlay"></div>
         <div class="forest-dialog-wrapper">
             <div class="forest-dialog">
-                <header>标题<span @click="close" class="forest-dialog-close"></span></header>
+                <header>
+                    <slot name="title"></slot>
+                    <span @click="close" class="forest-dialog-close"></span>
+                </header>
                 <main>
-                    <p>第一行字</p>
-                    <p>第二行字</p>
+                    <slot name="main"></slot>
                 </main>
                 <footer>
                     <Button level="main" @click="ok">OK</Button>
