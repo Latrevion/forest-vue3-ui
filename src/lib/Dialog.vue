@@ -9,7 +9,7 @@
                         <span @click="close" class="forest-dialog-close"></span>
                     </header>
                     <main>
-                        <slot name="main"></slot>
+                        <slot name="content"></slot>
                     </main>
                     <footer>
                         <Button level="main" @click="ok">OK</Button>
@@ -31,23 +31,27 @@ export default {
         },
         closeOnclickOverlay: {
             type: Boolean,
-            default: true
+            default: false
         },
         ok: {
             type: Function
         },
         cancel: {
             type: Function
+        },
+        toClickOverlay: {
+            type: Function
         }
     },
     components: { Button },
+
     setup(props, context) {
         const close = () => {
             context.emit('update:visible', false)
         }
 
         const onclickOverlay = () => {
-            if (props.closeOnclickOverlay) {
+            if (props.closeOnclickOverlay !== true) {
                 close()
             }
         }
@@ -60,11 +64,14 @@ export default {
         }
 
         const cancel = () => {
-            context.emit('cancel')
-            close()
+            if (props.cancel?.() !== false) {
+                close()
+            }
         }
 
-        return { onclickOverlay, close, ok, cancel }
+        return {
+            onclickOverlay, close, ok, cancel
+        }
     }
 }
 </script>
