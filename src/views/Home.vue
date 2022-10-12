@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div class="topnavAndBanner">
         <Topnav></Topnav>
         <div class="banner">
@@ -9,6 +10,7 @@
                 <router-link to="/doc">开始</router-link>
             </p>
         </div>
+    </div>
         <div class="features">
             <svg class="icon">
                 <use xlink:href="#icon-vue"></use>
@@ -36,6 +38,8 @@ $color: #007974;
 
 .topnavAndBanner {
     background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+    clip-path: ellipse(80% 60% at 50% 40%);
+
 }
 
 .features {

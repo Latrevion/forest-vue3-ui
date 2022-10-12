@@ -41,7 +41,7 @@ export default {
         const showDialog = () => {
             openDialog({
                 title: h('strong',{},'标题'),
-                closeOnclickOverlay: false,
+                closeOnclickOverlay: true,
                 content: '你好a ',
                 
                 ok(){
