@@ -2,18 +2,20 @@
   <div class="topnav">
     <div class="logo">
       <svg class="icon">
-      <use xlink:href="#icon-forest"></use>
-    </svg>
+        <use xlink:href="#icon-forest"></use>
+      </svg>
     </div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
     <span class="toggleAside" @click="toggleMenu"></span>
   </div>
 </template>
 <script lang="ts">
 import { inject, Ref } from 'vue'
+import { router } from '../router';
 
 export default {
   setup() {
