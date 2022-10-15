@@ -4,7 +4,7 @@
             <Topnav></Topnav>
             <div class="banner">
                 <h1>Forest UI</h1>
-                <h2>一个vue3 UI 框架</h2>
+                <h2>一个Vue3 UI 框架</h2>
                 <p class="actions">
                     <a href="https://github.com">GitHub</a>
                     <router-link to="/doc">开始</router-link>

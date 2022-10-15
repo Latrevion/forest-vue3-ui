@@ -102,10 +102,11 @@ aside {
     margin-bottom: 4px;
   }
 
-  aside {
+  & {
     >ol {
       >li {
-        padding: 4px 0;
+        // padding: 4px 0;
+        padding: 4px 0px 4px 10px;
       }
     }
   }
