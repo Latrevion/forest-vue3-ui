@@ -1,8 +1,15 @@
 <template>
-    <article class="markdown-body">
-        <h1>介绍</h1>
-        <p>Forest UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。</p>
-        <p>目前仍在迭代升级，处于Beta阶段，仅供学习，暂不推荐本 UI 库用于实际生产环境。目前仅支持 Vue3，推荐您使用 setup 语法糖，如果你在使用 Vue2，建议使用别的 UI 库。</p>
-        下一节：<a href="#/doc/install">安装</a>
+    <article class="markdown-body" v-html="md">
     </article>
 </template>
+
+<script>
+import md  from "../markdown/intro.md";
+export default{
+data() {
+    return {
+        md
+    }
+},
+}
+</script>
