@@ -2,14 +2,16 @@ import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
 import {createWebHashHistory,createRouter} from 'vue-router'
-import DocDemo from './components/DocDemo.vue'
 import ButtonDemo from './components/ButtonDemo.vue'
 import DialogDemo from './components/DialogDemo.vue'
 import TabsDemo from './components/TabsDemo.vue'
 import Markdown from "./components/Markdown.vue";
+import intro from './markdown/intro.md'
+import install from './markdown/install.md'
+import begin from './markdown/begin.md'
 import { h } from 'vue'
-const md =(filename)=>{
-  return  h(Markdown,{path:`../markdown/${filename}.md`,key:filename})
+const md =(string)=>{
+  return  h( Markdown, {content: string, key:string})
 }
 
 const history =createWebHashHistory()
@@ -21,14 +23,11 @@ export const router  =createRouter({
         children:[
             {path:'',redirect:'/doc/intro'},
             
-      
-            {path:'intro',component:md('intro')},
+            {path:'intro',component:md(intro)},
 
-     
-            {path:'install',component:md('install')},
+            {path:'install',component:md(install)},
 
-       
-            {path:'begin',component:md('begin')},
+            {path:'begin',component:md(begin)},
 
             {path:'switch',component:SwitchDemo},
             {path:'button',component:ButtonDemo},
