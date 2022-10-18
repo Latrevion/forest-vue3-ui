@@ -10,7 +10,7 @@
     </router-link>
     <ul class="menu">
       <li>
-        <router-link to="/doc">文档</router-link>
+        <router-link to="/doc">指南</router-link>
       </li>
     </ul>
     <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
@@ -84,6 +84,10 @@ $color: #007974;
 
     >li {
       margin: 0 1em;
+      .router-link-active {
+        color: #18a058;
+        border-bottom: 3px solid #18a058;
+      }
     }
   }
 
