@@ -92,7 +92,7 @@ export default {
 }
 
 aside {
-  // background: lightblue;
+  background: white;
   border-right: 1px solid ;
   border-right-color: #ccc;
   width: 150px;

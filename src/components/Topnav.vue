@@ -4,6 +4,9 @@
       <svg class="icon">
         <use xlink:href="#icon-forest"></use>
       </svg>
+      <span>
+        forest-ui
+      </span>
     </router-link>
     <ul class="menu">
       <li>
@@ -17,15 +20,15 @@
 </template>
 <script lang="ts">
 import { inject, Ref } from 'vue'
-import { router } from '../router';
+
 
 export default {
-props:{
-  toggleMenuButtonVisible:{
-    type:Boolean,
-    default:false
-  }
-},
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
 
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible')
@@ -56,12 +59,21 @@ $color: #007974;
   background: white;
 
   >.logo {
-    max-width: 6em;
+    // max-width: 6em;
+    max-width: 8em;
     margin-right: auto;
 
+    >span{
+      font-size: 20px;
+      line-height: 24px;
+      color: #90b686;
+      
+    }
+
     >svg {
-      width: 32px;
-      height: 32px;
+      color: rgb(255, 0, 4);
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -76,7 +88,7 @@ $color: #007974;
   }
 
   >.toggleAside {
-    width:22px;
+    width: 22px;
     height: 22px;
 
     position: absolute;
