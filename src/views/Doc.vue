@@ -92,7 +92,9 @@ export default {
 }
 
 aside {
-  background: lightblue;
+  // background: lightblue;
+  border-right: 1px solid ;
+  border-right-color: #ccc;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -117,7 +119,9 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: white;
+        color: #18a058;;
+        background: #eff5ee;
+        border-right: 3px solid #18a058;
       }
       }
     }
