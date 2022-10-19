@@ -13,14 +13,17 @@
         <router-link to="/doc">指南</router-link>
       </li>
     </ul>
-    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
-      <use xlink:href="#icon-wendang"></use>
+    <svg v-if="toggleMenuButtonVisible && newVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
+    <svg v-else-if="toggleMenuButtonVisible && !newVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-close"></use>
     </svg>
   </div>
 </template>
 <script lang="ts">
-import { inject, Ref } from 'vue'
-
+import { inject,Ref, ref } from 'vue'
+import {router}from  '../router'
 
 export default {
   props: {
@@ -31,12 +34,16 @@ export default {
   },
 
   setup() {
+    const newVisible =ref<boolean>(true)
     const menuVisible = inject<Ref<boolean>>('menuVisible')
     const toggleMenu = () => {
       menuVisible!.value = !menuVisible!.value
-
+      newVisible.value  =!newVisible.value
     }
-    return { toggleMenu }
+    router.afterEach(()=>{
+      newVisible.value  =!newVisible.value
+    })
+    return { toggleMenu,menuVisible,newVisible}
   }
 }
 </script>
@@ -58,6 +65,7 @@ $color: #007974;
   box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
   background: white;
 
+
   >.logo {
     // max-width: 6em;
     max-width: 8em;
@@ -73,6 +81,7 @@ $color: #007974;
     >svg {
       width: 24px;
       height: 24px;
+     
     }
   }
 
@@ -93,7 +102,8 @@ $color: #007974;
   >.toggleAside {
     width: 22px;
     height: 22px;
-
+    background: #EDF2F7;
+    border-radius: 6px;
     position: absolute;
     left: 16px;
     top: 50%;
