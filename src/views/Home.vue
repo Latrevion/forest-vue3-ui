@@ -21,13 +21,6 @@
             <ul>
                 <li>
                     <svg class="icon">
-                        <use xlink:href="#icon-vue"></use>
-                    </svg>
-                    <h3>基于Vue3</h3>
-                    <p>优先使用了 Vue3 Composition API</p>
-                </li>
-                <li>
-                    <svg class="icon">
                         <use xlink:href="#icon-typescript"></use>
                     </svg>
                     <h3>基于最新TypeScript</h3>
@@ -39,6 +32,13 @@
                     </svg>
                     <h3>文档易读</h3>
                     <p>每个组件的源代码及其简洁</p>
+                </li>
+                <li>
+                    <svg class="icon">
+                        <use xlink:href="#icon-vue"></use>
+                    </svg>
+                    <h3>基于Vue3</h3>
+                    <p>优先使用了 Vue3 Composition API</p>
                 </li>
             </ul>
         </div>
@@ -67,12 +67,15 @@ $color: #007974;
 .features {
     margin: 64px auto;
     padding: 0 16px;
+    margin-top: 0px;
+
 
     @media (min-width:800px) {
         width: 800px;
 
         >ul {
             >li {
+                padding-left: 40px;
                 width: 50%;
             }
         }
@@ -83,6 +86,7 @@ $color: #007974;
 
         >ul {
             >li {
+                padding-left: 43px;
                 width: 33.3333%;
             }
         }
@@ -135,6 +139,11 @@ $color: #007974;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media (max-width:799px) {
+ 
+        padding-bottom: 50px; 
+
+    }
 
     h1 {
         font-size: 48px;
