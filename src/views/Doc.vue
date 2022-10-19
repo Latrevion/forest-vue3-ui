@@ -3,7 +3,7 @@
     <Topnav class="nav" :toggleMenuButtonVisible="true" />
     <div class="content">
       <aside v-if="menuVisible">
-        <h2>文档</h2>
+        <h2>指南</h2>
         <ol>
           <li>
             <router-link to="/doc/intro">介绍</router-link>
@@ -87,13 +87,13 @@ export default {
     flex-grow: 1;
     padding: 16px;
     background: white;
-    
+
   }
 }
 
 aside {
   background: white;
-  border-right: 1px solid ;
+  border-right: 1px solid;
   border-right-color: #ccc;
   width: 150px;
   padding: 16px 0;
@@ -103,32 +103,46 @@ aside {
   padding-top: 70px;
   height: 100%;
   z-index: 10;
+
   >h2 {
+    line-height: 24px;
+    color: #303133;
+    font-weight: 700;
+    font-size: 16px;
     margin-bottom: 4px;
     padding: 0 16px;
+    padding-top: 20px;
   }
 
-  
-    >ol {
-      >li {
-        // padding: 4px 0;
-        // padding: 4px 0px 4px 10px;
-        >a {
+
+  >ol {
+    >li {
+
+      // padding: 4px 0;
+      // padding: 4px 0px 4px 10px;
+      >a {
         display: block;
-        padding: 4px 16px;
+        padding: 8px 16px 8px 26px;
         text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          color: #18a058;
+          background: #eff5ee;
+        }
       }
+
       .router-link-active {
-        color: #18a058;;
+        color: #18a058;
+        font-weight: 600;
         background: #eff5ee;
         border-right: 3px solid #18a058;
       }
-      }
     }
+  }
 
 
   main {
-    
     overflow: auto;
   }
 }
