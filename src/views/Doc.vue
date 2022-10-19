@@ -87,7 +87,7 @@ export default {
     flex-grow: 1;
     padding: 16px;
     background: white;
-    ;
+    
   }
 }
 
@@ -128,6 +128,7 @@ aside {
 
 
   main {
+    
     overflow: auto;
   }
 }

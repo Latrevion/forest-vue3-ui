@@ -12,3 +12,11 @@ export default{
     }
 }
 </script>
+<style lang="scss">
+.markdown-body{
+    p>a{
+        color: rgb(144, 182, 134);
+        text-decoration: underline;
+    }
+}
+</style>
