@@ -4,7 +4,12 @@
             <Topnav></Topnav>
             <div class="banner">
                 <h1>Forest UI</h1>
-                <h2>一个Vue3 UI 框架</h2>
+                <h2>一个Vue3 UI 框架
+                    <svg width="120" height="41" viewBox="0 0 209 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 35C58.3333 35.8333 145.5 35 203 6.5" stroke="#43E229" stroke-width="11"
+                            stroke-linecap="round" stroke-linejoin="round" id="tick" />
+                    </svg>
+                </h2>
                 <p class="tagline">基于vue3的UI组件，目前功能有Button，Switch，Dialog，Tabs</p>
                 <p class="actions">
                     <a class="github" href="https://github.com">View on GitHub</a>
@@ -123,7 +128,7 @@ $color: #007974;
 
 .banner {
     color: $color;
-    padding-top: 150px ;
+    padding-top: 150px;
     padding-bottom: 100px;
     // padding: 100px 0;
     display: flex;
@@ -145,6 +150,33 @@ $color: #007974;
         font-size: 48px;
         font-weight: 700;
         color: #213547;
+        position: relative;
+    }
+
+    svg {
+        position: absolute;
+        bottom: -5px;
+        left: 90px;
+        z-index: -1;
+    }
+
+    #tick {
+        stroke-dasharray: 210px;
+        stroke-dashoffset: 210px;
+        animation: 3s tick ease-in-out infinite;
+    }
+
+    @keyframes tick {
+
+        0%,
+        50% {
+            stroke-dashoffset: 210px;
+        }
+
+        50%,
+        100% {
+            stroke-dashoffset: 0px;
+        }
     }
 
     .tagline {
@@ -157,7 +189,7 @@ $color: #007974;
 
     >.actions {
         // padding: 8px 0;
-        padding-top:32px ;
+        padding-top: 32px;
 
         a {
             margin: 0 8px;
@@ -172,11 +204,13 @@ $color: #007974;
                 background-color: #42d393;
             }
         }
-        .github{
-            border-color:#d1d1d1 ;
+
+        .github {
+            border-color: #d1d1d1;
             background: #f2f2f2;
             color: #213547;
-            &:hover{
+
+            &:hover {
 
                 background-color: #e5e5e5;
             }
