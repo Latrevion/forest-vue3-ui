@@ -106,10 +106,13 @@ $color: #007974;
             >h3 {
                 grid-area: title;
                 font-size: 28px;
+                color:rgb(81, 90, 110);
             }
 
             >p {
                 grid-area: text;
+                color: #808695;
+                font-size: 16px;
             }
         }
     }
