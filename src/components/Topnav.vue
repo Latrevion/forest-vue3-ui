@@ -71,7 +71,6 @@ $color: #007974;
     }
 
     >svg {
-      color: rgb(255, 0, 4);
       width: 24px;
       height: 24px;
     }
