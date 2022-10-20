@@ -28,7 +28,7 @@ export default {
 
         pre{
             margin: 0 auto;
-            width: 380px;
+            width: 358px;
             code{
                 overflow-x: scroll;
             }
