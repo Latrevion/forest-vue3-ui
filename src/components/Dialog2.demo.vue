@@ -18,9 +18,9 @@ export default {
 
         const showDialog = () => {
             openDialog({
-                title: h('strong', {}, '标题'),
+                title: h('strong', {}, '这里是标题'),
                 closeOnclickOverlay: true,
-                content: '你好a ',
+                content: '第一行内容',
 
                 ok() {
                     console.log('ok')

@@ -7,7 +7,7 @@
         <Dialog v-model:visible="x" :closeOnclickOverlay="true" :ok="fn1" :cancel="fn2">
             <template v-slot:title>
                 <strong>
-                    这是标题哦
+                    这里是标题
                 </strong>
             </template>
             <template v-slot:content>
