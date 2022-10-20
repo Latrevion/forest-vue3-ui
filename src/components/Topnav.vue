@@ -22,8 +22,8 @@
   </div>
 </template>
 <script lang="ts">
-import { inject,Ref, ref } from 'vue'
-import {router}from  '../router'
+import { inject, Ref, ref } from 'vue'
+import { router } from '../router'
 
 export default {
   props: {
@@ -34,16 +34,16 @@ export default {
   },
 
   setup() {
-    const newVisible =ref<boolean>(true)
+    const newVisible = ref<boolean>(true)
     const menuVisible = inject<Ref<boolean>>('menuVisible')
     const toggleMenu = () => {
       menuVisible!.value = !menuVisible!.value
-      newVisible.value  =!newVisible.value
+      newVisible.value = !newVisible.value
     }
-    router.afterEach(()=>{
-      newVisible.value  =!newVisible.value
+    router.afterEach(() => {
+      newVisible.value = !newVisible.value
     })
-    return { toggleMenu,menuVisible,newVisible}
+    return { toggleMenu, menuVisible, newVisible }
   }
 }
 </script>
@@ -71,17 +71,17 @@ $color: #007974;
     max-width: 8em;
     margin-right: auto;
 
-    >span{
+    >span {
       font-size: 20px;
       line-height: 24px;
-      color: #90b686;
-      
+      color: rgb(66, 184, 131);
+      font-weight: 600
     }
 
     >svg {
       width: 24px;
       height: 24px;
-     
+
     }
   }
 
@@ -92,6 +92,7 @@ $color: #007974;
 
     >li {
       margin: 0 1em;
+
       .router-link-active {
         color: #18a058;
         border-bottom: 3px solid #18a058;
