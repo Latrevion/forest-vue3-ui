@@ -121,24 +121,22 @@ aside {
   >ol {
     >li {
 
-      // padding: 4px 0;
-      // padding: 4px 0px 4px 10px;
       >a {
+        color: #828282;
         display: block;
         padding: 8px 16px 8px 26px;
         text-decoration: none;
         font-size: 16px;
 
         &:hover {
-          color: #18a058;
-          background: #eff5ee;
+          color: rgb(20, 20, 20);
+          background: rgb(245, 245, 245);
         }
       }
 
       .router-link-active {
-        color: #18a058;
-        font-weight: 600;
-        background: #eff5ee;
+        color: white !important;
+        background: #42b883 !important;
         border-right: 3px solid #18a058;
       }
     }
