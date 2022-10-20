@@ -14,6 +14,12 @@ export default {
 </script>
 <style lang="scss">
 .markdown-body {
+
+    h1,h2{
+      color: #464646!important;
+      font-size: 26px !important;
+    }
+
     p {
         font-size: 16px;
         color: #5e6d82;
