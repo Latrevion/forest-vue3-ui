@@ -3,8 +3,10 @@
 </demo>
 <template>
     <Tabs v-model:selected="x">
-        <Tab title="导航1">内容1</Tab>
-        <Tab title="导航2">内容2</Tab>
+        <Tab title="北京">不到长城非好汉</Tab>
+        <Tab title="上海">上海滩，东方明珠</Tab>
+        <Tab title="广州">广州是一座美食之都</Tab>
+        <Tab title="深圳">来了就是深圳人</Tab>
     </Tabs> 
 </template>
 <script lang="ts">
@@ -16,7 +18,7 @@ export default {
         Tabs, Tab
     },
     setup() {
-        const x = ref('导航1')
+        const x = ref('北京')
         return { x }
     }
 }
