@@ -16,7 +16,6 @@ export default {
         Demo
     },
     setup() {
-   
         return {
              Switch1Demo, Switch2Demo
         }

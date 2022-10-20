@@ -5,10 +5,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 export default {
   props: {
-    value: Boolean
+    value: Boolean,
   },
   setup(props, context) {
     const toggle = () => {
@@ -22,12 +21,17 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
+:root{
+  --forest-bg-off-color:#bfbfbf;
+  --forest-bg-on-color:  #1890ff;
+}
+
 
 .forest-switch {
   height: $h;
   width: $h * 2;
   border: none;
-  background: #bfbfbf;
+  background: var(--forest-bg-off-color);
   border-radius: $h/2;
   position: relative;
 
@@ -43,7 +47,7 @@ $h2: $h - 4px;
   }
 
   &.forest-checked {
-    background: #1890ff;
+    background: var(--forest-bg-on-color);
 
     >span {
       left: calc(100% - #{$h2} - 2px);
