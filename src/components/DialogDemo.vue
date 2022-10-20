@@ -1,5 +1,5 @@
 <template>
-    <h1>Dialog 示例</h1>
+    <h1>Dialog</h1>
     <Demo :component="Dialog1Demo"></Demo>
     <Demo :component="Dialog2Demo"></Demo>
 </template>
@@ -20,3 +20,9 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+h1{
+    color:#464646 ;
+    font-size: 26px;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Switch 组件示例 </h1>
+        <h1>Switch</h1>
         <Demo :component="Switch1Demo"></Demo>
         <Demo :component="Switch2Demo"></Demo>
     </div>
@@ -23,3 +23,9 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+h1{
+    color:#464646 ;
+    font-size: 26px;
+}
+</style>

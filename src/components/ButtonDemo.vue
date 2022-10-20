@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Button 示例</h1>
+        <h1>Button</h1>
         <Demo :component="Button1demo"></Demo>
         <Demo :component="Button2demo"></Demo>
         <Demo :component="Button3demo"></Demo>
@@ -22,3 +22,10 @@ export default {
     }
 } 
 </script>
+
+<style lang="scss" scoped>
+h1{
+    color:#464646 ;
+    font-size: 26px;
+}
+</style>
