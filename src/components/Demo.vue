@@ -75,6 +75,21 @@ $border-color: #d9d9d9;
         }
     }
 
-
 }
+
+@media (max-width:414px) {
+    .demo-actions {
+        padding: 8px 8px;
+
+    }
+        .demo-code {
+            margin: 0 auto;
+            padding: 2px 2px;
+            max-width: 356px;
+    
+            >pre {
+                overflow-x: auto;
+            }
+        }
+        }
 </style>

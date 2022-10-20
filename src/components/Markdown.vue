@@ -23,5 +23,16 @@ export default {
             text-decoration: underline;
         }
     }
+
+    @media (max-width:414px) {
+
+        pre{
+            margin: 0 auto;
+            width: 380px;
+            code{
+                overflow-x: scroll;
+            }
+        }
+    }
 }
 </style>

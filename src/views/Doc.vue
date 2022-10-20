@@ -88,6 +88,9 @@ export default {
     padding: 16px;
     background: white;
 
+    @media (max-width:420px) {
+      padding: 16px 8px;
+    }
   }
 }
 
