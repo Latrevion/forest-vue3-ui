@@ -2,6 +2,7 @@ import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
 import {createWebHashHistory,createRouter} from 'vue-router'
+import AvatarDemo from './components/AvatarDemo.vue'
 import ButtonDemo from './components/ButtonDemo.vue'
 import CardDemo from './components/CardDemo.vue'
 import DialogDemo from './components/DialogDemo.vue'
@@ -34,7 +35,8 @@ export const router  =createRouter({
             {path:'button',component:ButtonDemo},
             {path:'dialog',component:DialogDemo},
             {path:'tabs',component:TabsDemo},
-            {path:'card',component:CardDemo}
+            {path:'card',component:CardDemo},
+            {path:'avatar',component:AvatarDemo},
     ]
     },
 ]

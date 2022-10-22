@@ -18,7 +18,7 @@ const props = defineProps({
     max-width: 480px;
     max-height: 260px;
     border-radius: 4px;
-    border: 1px solid #e4e7ed;
+    border: 1px solid #31c48d;
     &:hover{
         box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
     }
@@ -27,7 +27,7 @@ const props = defineProps({
         padding: 18px 20px;
         font-size: 16px;
         color: #1e1e1e;
-        border-bottom: 1px solid #e4e7ed;
+        border-bottom: 1px solid #31c48d;
     }
 
     div {
