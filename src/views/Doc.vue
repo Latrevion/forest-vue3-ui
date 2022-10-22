@@ -18,13 +18,13 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
-          </li>
-          <li>
             <router-link to="/doc/button">Button 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/dialog">Dialog 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/switch">Switch 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/tabs">Tabs 组件</router-link>
@@ -124,7 +124,7 @@ aside {
       >a {
         color: #828282;
         display: block;
-        padding: 8px 16px 8px 26px;
+        padding: 6px 16px 6px 26px;
         text-decoration: none;
         font-size: 16px;
 
