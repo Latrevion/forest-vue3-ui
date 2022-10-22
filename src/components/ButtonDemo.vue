@@ -3,6 +3,7 @@
         <h1>Button</h1>
         <Demo :component="Button1demo"></Demo>
         <Demo :component="Button3demo"></Demo>
+        <Demo :component="Button6demo"></Demo>
         <Demo :component="Button5demo"></Demo>
         <Demo :component="Button2demo"></Demo>
         <Demo :component="Button4demo"></Demo>
@@ -15,10 +16,11 @@ import Button2demo from './Button2.demo.vue'
 import Button3demo from './Button3.demo.vue'
 import Button4demo from './Button4.demo.vue'
 import Button5demo from './Button5.demo.vue'
+import Button6demo from './Button6.demo.vue'
 export default {
     components: { Demo },
     setup() {
-        return { Button1demo, Button2demo, Button3demo, Button4demo, Button5demo }
+        return { Button1demo, Button2demo, Button3demo, Button4demo, Button5demo,Button6demo  }
     }
 } 
 </script>

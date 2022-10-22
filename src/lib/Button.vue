@@ -27,15 +27,20 @@ export default {
         loading: {
             type: Boolean,
             default: false
+        },
+        round: {
+            type: Boolean,
+            default: false
         }
     },
     setup(props) {
-        const { theme, size, level } = props
+        const { round, theme, size, level } = props
         const classes = computed(() => {
             return {
                 [`forest-theme-${theme}`]: theme,
                 [`forest-size-${size}`]: size,
-                [`forest-level-${level}`]: level
+                [`forest-level-${level}`]: level,
+                [`forest-round`]: round
             }
         })
         return { classes }
@@ -50,13 +55,15 @@ $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
-$red: red;
+$red: #f56c6c;
 $grey: grey;
+$round-radius: 16px;
 
 .forest-button {
+    font-size: 14px;
     box-sizing: border-box;
     height: $h;
-    padding: 0 12px;
+    padding: 0 15px;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -68,6 +75,10 @@ $grey: grey;
     border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
     transition: background 250ms;
+
+    &.forest-round {
+    border-radius: $round-radius;
+}
 
     &+& {
         margin-left: 8px;
