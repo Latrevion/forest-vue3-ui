@@ -52,9 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// $green: #02bcb0;
 $green: #42b883;
-// $border-radius: 4px;
 $border-radius: 20px;
 $color: #007974;
 
@@ -129,7 +127,6 @@ $color: #007974;
     color: $color;
     padding-top: 150px;
     padding-bottom: 100px;
-    // padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +189,7 @@ $color: #007974;
     }
 
     >.actions {
-        // padding: 8px 0;
+
         padding-top: 32px;
 
         a {
