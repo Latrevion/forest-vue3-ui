@@ -5,15 +5,15 @@
             <div class="forest-dialog-wrapper">
                 <div class="forest-dialog">
                     <header>
-                        <slot name="title"></slot>
+                        <slot name="title" class="title"></slot>
                         <span @click="close" class="forest-dialog-close"></span>
                     </header>
-                    <main>
+                    <main class="main">
                         <slot name="content"></slot>
                     </main>
                     <footer>
-                        <Button level="main" @click="ok">OK</Button>
                         <Button @click="cancel">Cancel</Button>
+                        <Button level="main" @click="ok">OK</Button>
                     </footer>
                 </div>
             </div>
@@ -86,6 +86,16 @@ $border-color: #d9d9d9;
     box-shadow: 0 0 3px fade_out(black, 0.5);
     min-width: 15em;
     max-width: 90%;
+
+    strong{
+        font-size: 16px ;
+        color: #1e1e1e;
+    }
+
+    .main{
+        font-size: 14px;
+        color: #6e6e6e;
+    }
 
     &-overlay {
         position: fixed;
