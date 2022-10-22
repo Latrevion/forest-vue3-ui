@@ -43,11 +43,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
+$border-color: #ebebeb;
 
 .demo {
     border: 1px solid $border-color;
     margin: 16px 0 32px;
+    max-width: 1200px;
 
     >h2 {
         font-size: 20px;
