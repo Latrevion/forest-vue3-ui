@@ -15,7 +15,7 @@
         }
     }
 </script>
-<style>
+<style scoped>
 div{
     margin-right: 10px;
 }
