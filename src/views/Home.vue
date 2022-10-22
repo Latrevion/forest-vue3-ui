@@ -10,7 +10,7 @@
                             stroke-linecap="round" stroke-linejoin="round" id="tick" />
                     </svg>
                 </h2>
-                <p class="tagline">基于vue3的UI组件，目前功能有Button，Switch，Dialog，Tabs</p>
+                <p class="tagline">基于Vue3的UI组件，目前功能有Button，Switch，Dialog，Tabs</p>
                 <p class="actions">
                     <a class="github" href="https://github.com">View on GitHub</a>
                     <router-link to="/doc">开始使用</router-link>
