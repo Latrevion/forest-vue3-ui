@@ -80,7 +80,7 @@ $border-color: #ebebeb;
 
 @media (max-width:414px) {
     .demo-actions {
-        padding: 8px 8px;
+        padding: 8px 16px;
 
     }
         .demo-code {
