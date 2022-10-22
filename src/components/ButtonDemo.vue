@@ -2,10 +2,10 @@
     <div>
         <h1>Button</h1>
         <Demo :component="Button1demo"></Demo>
-        <Demo :component="Button2demo"></Demo>
         <Demo :component="Button3demo"></Demo>
-        <Demo :component="Button4demo"></Demo>
         <Demo :component="Button5demo"></Demo>
+        <Demo :component="Button2demo"></Demo>
+        <Demo :component="Button4demo"></Demo>
     </div>
 </template>
 <script lang="ts">
