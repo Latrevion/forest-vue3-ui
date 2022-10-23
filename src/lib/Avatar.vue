@@ -26,7 +26,11 @@ export default {
 <style lang="scss" scoped>
 div{
     display: inline-block;
-}
+
+
+    &+& {
+        margin-left: 10px;
+    }
 
 img {
     border-radius: 50%;
@@ -51,4 +55,7 @@ img {
     width: 60px;
     height: 60px;
 }
+
+}
+
 </style>

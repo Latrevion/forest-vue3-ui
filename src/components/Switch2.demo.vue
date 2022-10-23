@@ -21,8 +21,3 @@ export default {
     }
 }
 </script>
-<style scoped lang="scss">
-button{
-    margin-right: 10px;
-}
-</style>

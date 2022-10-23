@@ -21,8 +21,3 @@ export default {
     }
 }
 </script>
-<style scoped> 
-p{
-    margin-bottom: 14px;
-}
-</style>

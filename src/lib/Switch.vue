@@ -35,6 +35,12 @@ $h2: $h - 4px;
   border-radius: $h/2;
   position: relative;
 
+
+  &+& {
+        margin-left: 10px;
+    }
+
+  
   >span {
     position: absolute;
     top: 2px;

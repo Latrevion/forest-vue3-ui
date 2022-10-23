@@ -15,8 +15,3 @@
         }
     }
 </script>
-<style scoped>
-div{
-    margin-right: 10px;
-}
-</style>

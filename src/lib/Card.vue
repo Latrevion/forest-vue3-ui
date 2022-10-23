@@ -34,6 +34,10 @@ const props = defineProps({
         padding: 20px;
         font-size: 14px;
         color: #303133;
+
+       & :deep(p){
+            margin-bottom: 14px;
+        }
     }
 
 
