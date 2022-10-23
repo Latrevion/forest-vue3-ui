@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="src" :alt="alt" :class='classes'>
+            <img :src="src" :alt="alt" :class='classes'>
     </div>
 </template>
 <script lang="ts">
@@ -26,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 div{
     display: inline-block;
+ 
 
 
     &+& {
@@ -33,6 +34,8 @@ div{
     }
 
 img {
+    overflow: hidden;
+    display: block;
     border-radius: 50%;
     width: 100%;
     height: 100%;
