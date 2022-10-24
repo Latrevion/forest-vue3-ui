@@ -1,21 +1,20 @@
 <template>
-    <div class="wrapper" :class="{'error':error}">
-        <input type="text" :value="value" :disabled="disabled" :readonly="readonly"
-            @change="$emit('change',$event.target.value)" @input='$emit("update:value",$event.target.value)'
-            @focus="$emit('focus',$event.target.value)" @blur="$emit('blur',$event.target.value)">
-        <template v-if="error">
-            <svg class="icon icon-error" aria-hidden="true">
-                <use xlink:href="#icon-error"></use>
-            </svg>
-            <span class="errorMessage">{{error}}</span>
-        </template>
+    <div class="wrapper" :class="{ 'error': error }">
+        <input :placeholder="placeholder" :type=type :value="value" :disabled="disabled" :readonly="readonly"
+            @input='$emit("update:value", $event.target.value)' @change="$emit('change', $event.target.value)"
+            @focus="$emit('focus', $event.target.value)" @blur="$emit('blur', $event.target.value)">
     </div>
 </template>
+
 <script>
 
 export default {
     components: {},
     props: {
+        placeholder: {
+            type: String,
+            default: '请输入'
+        },
         value: {
             type: String
         },
@@ -29,6 +28,10 @@ export default {
         },
         error: {
             type: String
+        },
+        type:{
+            type:String,
+            default:'text'
         }
     }
 }
@@ -47,6 +50,7 @@ $red: #f1453d;
     display: inline-flex;
     align-items: center;
 
+
     >* {
         margin-right: 0.5em;
 
@@ -56,19 +60,31 @@ $red: #f1453d;
     }
 
     >input {
+        margin-bottom: 10px;
+        &::-webkit-input-placeholder {
+            color: #ccc;
+        }
+
+        &::-moz-placeholder {
+            color: #ccc;
+        }
+
         height: 32px;
-        border: 1px solid $border-color;
+        border: 2px solid #dddfe6;
         border-radius: $border-radius;
         padding: 0 8px;
         font-size: inherit;
 
         &:hover {
-            border-color: $border-hover-color;
+            border-color: #c1c4cc;
         }
 
         &:focus {
-            box-shadow: inset 0 1px 3px $box-shadow-color;
+            box-shadow: inset 0 0 0 1px #31c48d;
             outline: none;
+            background-color: transparent;
+            border: 1px solid #31c48d;
+            padding: 0 9px;
         }
 
         &[disabled],
@@ -79,18 +95,5 @@ $red: #f1453d;
         }
     }
 
-    &.error {
-        >input {
-            border-color: $red;
-        }
-    }
-
-    .icon-error {
-        fill: $red;
-    }
-
-    .errorMessage {
-        color: $red;
-    }
 }
 </style>
