@@ -132,7 +132,7 @@ $color: #007974;
     align-items: center;
     flex-direction: column;
     @media (max-width:799px) {
- 
+        padding-top: 100px;
         padding-bottom: 50px; 
 
     }
