@@ -14,6 +14,7 @@ export default {
 </script>
 <style lang="scss">
 .markdown-body {
+    background-color: #fff !important;
 
     h1,h2{
       color: #464646!important;
@@ -35,6 +36,8 @@ export default {
         pre{
             margin: 0 auto;
             width: 358px;
+            background-color: #f6f8fa !important;
+            color: #24292f;
             code{
                 overflow-x: scroll;
             }
