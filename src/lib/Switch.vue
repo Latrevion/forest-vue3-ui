@@ -5,6 +5,7 @@
 </template>
 
 <script lang="ts">
+import {ref} from 'vue'
 export default {
   props: {
     value: Boolean,
@@ -14,7 +15,8 @@ export default {
     }
   },
   setup(props, context) {
-    const toggle = () => {
+    const toggle =ref()
+     toggle.value = () => {
       context.emit('update:value', !props.value)
     }
     return { toggle }
