@@ -5,13 +5,13 @@
 推荐 yarn 安装
 
 ```
-yarn add forest-ui
+yarn add forest-vue3-ui
 ```
 
 或
 
 ```
-npm install forest-ui
+npm install forest-vue3-ui
 ```
 
 下一节：[开始使用](#/doc/begin)
