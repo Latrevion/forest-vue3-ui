@@ -8,9 +8,18 @@ import { computed } from 'vue'
 
 export default {
     props: {
-        src: String,
-        alt: String,
-        size: String
+        src: {
+            type:String,
+            required:true
+        },
+        alt: {
+            type:String,
+            default:"alt"
+        },
+        size: {
+            type:String,
+            default:"small"
+        }
     },
     setup(props) {
         const { size } = props
@@ -27,8 +36,6 @@ export default {
 div{
     display: inline-block;
  
-
-
     &+& {
         margin-left: 10px;
     }
