@@ -2,8 +2,8 @@
 基础用法
 </demo>
 <template>
-    <Switch v-model:value="bool"></Switch>
     <Switch v-model:value="bool1" style="--forest-bg-on-color:#13ce66; --forest-bg-off-color:#ff4949;"></Switch>
+    <Switch v-model:value="bool"></Switch>
 </template>
 <script lang="ts">
 import Switch from '../lib/Switch.vue'

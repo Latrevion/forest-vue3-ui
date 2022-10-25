@@ -2,8 +2,8 @@
 支持 disabled
 </demo>
 <template>
-    <Switch v-model:value="bool" disabled></Switch>
     <Switch v-model:value="bool1" style="--forest-bg-on-color:#13ce66; --forest-bg-off-color:#ff4949;" disabled></Switch>
+    <Switch v-model:value="bool" disabled></Switch>
 </template>
 <script lang="ts">
 import Switch from '../lib/Switch.vue'

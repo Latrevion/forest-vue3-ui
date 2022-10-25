@@ -1,5 +1,5 @@
 <template>
-  <button class="forest-switch" @click="toggle" :class="{ 'forest-checked':value }">
+  <button class="forest-switch" @click="toggle" :class="{ 'forest-checked':value }" :disabled="disabled">
     <span></span>
   </button>
 </template>
@@ -8,6 +8,10 @@
 export default {
   props: {
     value: Boolean,
+    disabled:{
+     type:Boolean,
+     default:false
+    }
   },
   setup(props, context) {
     const toggle = () => {
@@ -18,21 +22,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $h: 22px;
 $h2: $h - 4px;
-:root{
-  --forest-bg-off-color:#bfbfbf;
-  --forest-bg-on-color:  #1890ff;
-}
+
+
 
 
 .forest-switch {
   height: $h;
   width: $h * 2;
   border: none;
-  background: var(--forest-bg-off-color);
-  border-radius: $h/2;
+  background-color: var(--forest-bg-off-color);
+  border-radius: calc($h / 2);
   position: relative;
 
 
@@ -48,7 +50,7 @@ $h2: $h - 4px;
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: $h2 / 2;
+    border-radius: calc($h2 / 2);
     transition: all 250ms;
   }
 
