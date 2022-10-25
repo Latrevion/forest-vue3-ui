@@ -3,5 +3,5 @@ node_modules
 dist
 *.local
 /dist
-/.idea
-/.vscode
+.idea
+.vscode
