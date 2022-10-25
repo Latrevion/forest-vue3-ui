@@ -9,6 +9,8 @@ yarn add forest-vue3-ui
 ## 开始使用
 <code>
 import {Avatar,Button,Card,Dialog,openDialog,Input,Switch,Tabs,Tab}from 'forest-vue3-ui'
+</code> 
+<code>
 import 'forest-vue3-ui/dist/lib/forest.css'
 </code>
 
