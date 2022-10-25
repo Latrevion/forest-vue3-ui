@@ -1,6 +1,6 @@
 <template>
-    <div>
-            <img :src="src" :alt="alt" :class='classes'>
+    <div class="Avatar">
+        <img :src="src" :alt="alt" :class='classes'>
     </div>
 </template>
 <script lang="ts">
@@ -33,9 +33,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-div{
+.Avatar{
     display: inline-block;
- 
     &+& {
         margin-left: 10px;
     }
