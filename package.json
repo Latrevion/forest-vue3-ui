@@ -1,7 +1,7 @@
 
 {
   "name": "forest-vue3-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": ["dist/lib/*"],
   "main": "dist/lib/forest.js",
   "scripts": {
