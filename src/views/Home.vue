@@ -12,7 +12,7 @@
                 </h2>
                 <p class="tagline">基于Vue3的UI组件，目前功能Button，Switch，Dialog，Tabs...</p>
                 <p class="actions">
-                    <a class="github" href="https://github.com">View on GitHub</a>
+                    <a class="github" href="https://github.com/Latrevion/forest-vue3-ui">View on GitHub</a>
                     <router-link to="/doc">开始使用</router-link>
                 </p>
             </div>
